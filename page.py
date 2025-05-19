@@ -48,23 +48,13 @@ def session_init():
 
 
 def main():
-    if pt in ["Windows"]:
-        session_init()  # session缓存初始化
-        css_init()  # 前端css样式初始化
-        html_init()  # 前端html布局初始化
-    else:
-        cs_404()
-    return None
+ 
+    session_init()  # session缓存初始化
+    css_init()  # 前端css样式初始化
+    html_init()  # 前端html布局初始化
+    
+   
 
-
-def cs_404():
-    # 背景图片的网址
-    img_url = 'https://img.zcool.cn/community/0156cb59439764a8012193a324fdaa.gif'
-
-    # 修改背景样式
-    st.markdown('''<span style="color: cyan"> ''' + f"不支持当前系统 {pt} 运行" + '''</span>''', unsafe_allow_html=True)
-    st.markdown('''<style>.css-fg4pbf{background-image:url(''' + img_url + ''');
-    background-size:100% 100%;background-attachment:fixed;}</style>''', unsafe_allow_html=True)
 
 
 def img_to_bytes(img_path):
