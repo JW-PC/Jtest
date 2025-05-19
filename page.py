@@ -53,12 +53,35 @@ def main():
     css_init()  # 前端css样式初始化
     html_init()  # 前端html布局初始化
     
-
-
 def img_to_bytes(img_path):
-    # 使用pathlib模块构建路径，自动处理路径分隔符
-    file_path = Path(__file__).parent / img_path
-    return file_path.read_bytes()  
+    """将图片文件转换为字节流，支持相对路径和绝对路径"""
+    try:
+        # 获取脚本所在目录
+        script_dir = Path(__file__).parent
+        # 构建完整路径
+        file_path = script_dir / img_path
+        
+        # 调试信息（在开发环境可见）
+        if st.runtime.exists():
+            st.write(f"尝试读取图片: `{file_path}`")
+            st.write(f"文件是否存在: `{file_path.exists()}`")
+        
+        # 检查文件是否存在
+        if not file_path.exists():
+            error_msg = f"找不到图片文件: {file_path}"
+            if st.runtime.exists():
+                st.error(error_msg)
+            raise FileNotFoundError(error_msg)
+            
+        # 读取文件内容
+        return file_path.read_bytes()
+        
+    except Exception as e:
+        # 通用错误处理
+        error_msg = f"读取图片时出错: {str(e)}"
+        if st.runtime.exists():
+            st.error(error_msg)
+        raise
 
 
 
