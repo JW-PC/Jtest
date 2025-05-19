@@ -17,4 +17,4 @@ DeepSeek申请apikey后需要充值金额才能使用，收费标准比较低2�
 1、链接：https://bailian.console.aliyun.com/?tab=model#/api-key
 2、注册账号并登录（可直接用支付宝账号登录）
 3、创建apikey
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/487b4bf3-4c26-4940-993a-3b37e1b65534)
