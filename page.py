@@ -120,7 +120,7 @@ def html_init():
         with expander1:
             st.markdown(
                 """
-            👉<a href="https://github.com/13429837441/AutoGenTestCase/blob/main/README.md" target='blank'>模型ApiKey申请说明</a>👈
+            👉<a href="https://github.com/JW-PC/Jtest/blob/main/README.md" target='blank'>模型ApiKey申请说明</a>👈
             ### **使用步骤**
             ##### 1、上传文件（.txt）或手动输入需求描述
             ##### 2、设置高级选项设置
