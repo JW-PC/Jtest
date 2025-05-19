@@ -144,10 +144,7 @@ def html_init():
                 """
             )
     # sidebar标题
-    st.sidebar.markdown("---")
-
-    st.sidebar.markdown('''<small style='float: right'>By <a id="reload" href="#公众号：One Little Testing" title="公众号：One Little Testing">@Jack</a></small>''',
-                        unsafe_allow_html=True)
+   
 
     # 读取配置
     conf.read(config_path)
